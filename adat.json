@@ -2,15 +2,21 @@
   "emberekLISTA": [
     {
       "id": "5",
-      "nev": "az a robin biciklije",
+      "nev": "Nemtudom11",
       "kor": 1,
       "nem": true
     },
     {
       "id": "6",
-      "nev": "az a robin biciklije",
-      "kor": 1,
+      "nev": "Nemtudom11",
+      "kor": "11",
       "nem": true
+    },
+    {
+      "id": "7",
+      "nev": "Kunu Márió",
+      "kor": "33",
+      "nem": false
     }
   ]
 }

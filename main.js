@@ -70,19 +70,21 @@ function torolEsemeny() {
 
 
 function editelEsemeny(lista) {
-  /* Akkor fog lefutni, ha sor melletti torol gombra kattintunk.  */
+  /* Akkor fog lefutni, ha sor alatti szerkesztés gombra kattintunk.  */
   const torolGOMB = $(".editel");
   torolGOMB.on("click", function (event) {
-    /*  event.target az az elem, amelyik kiváltotta az eseményt */
+    /*  event.target az az elem, amit változtatni fogunk */
     let id = event.target.id;
 
-    console.log(lista.find(item => item.id === id));
+    let valtoztatas = lista.find(item => item.id === id)
 
-    let obj = lista.find(item => item.id === id)
+    /* CSAK MANUÁLISAN TUDTAM MEGOLDANI MIVEL BUTA VAGYOK, DE MÜKSZIK! >.< */
 
-    obj.nev = "az a robin biciklije"
+    valtoztatas.nev = "Kunu Márió"
+    valtoztatas.kor = "33"
+    valtoztatas.nem = false
 
-    patchAdat("http://localhost:3000/emberekLISTA/" + id, obj)
+    patchAdat("http://localhost:3000/emberekLISTA/" + id, valtoztatas)
   });
 }
 
